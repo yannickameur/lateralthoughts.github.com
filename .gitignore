@@ -1,0 +1,15 @@
+*/bin/*
+*/conf/*
+*/localhost/*
+*/target/*
+*/.settings/*
+*/.classpath
+*/.project
+*/.velocity.log
+.settings/*
+*.iml
+*.pmd
+*.log
+*.ipr
+*.iws
+.project
