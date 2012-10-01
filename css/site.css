@@ -1,14 +1,23 @@
 
+.footer {
+	background-image : url('../img/classy_fabric.png')  ;
+	background-repeat : repeat ;
+}
+
 .navbar .brand {
     font-size: 30px;
     padding-top: 3px;
+}
+
+.afterbanner {
+margin-top : 50px;
 }
 
 /* Footer
 -------------------------------------------------- */
 .footer {
     margin-top: 45px;
-    padding: 35px 0 36px;
+    padding: 35px 25px 36px;
     border-top: 1px solid #e5e5e5;
 }
 

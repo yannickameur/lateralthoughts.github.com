@@ -14,11 +14,11 @@
 </head>
 <body data-spy="scroll" data-target=".subnav" data-offset="50">
 
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top" id="header">
     <div class="navbar-inner">
         <!-- The template-->
         <div id="banner-id" class="container">
-            <a class="brand" href="index.html">Lateral Thoughts</a>
+            <a class="brand" href="index.html"><img src="img/logo.png" width="120" height="120"/> </a>
 
             <div class="nav-collapse collapse">
                 <ul class="nav nav-pills">
@@ -42,8 +42,8 @@
         </div>
 
         <!-- Headings & Paragraph Copy -->
-        <div class="row">
-            <div class="span6">
+        <div class="row-fluid">
+            <div class="span6 well">
                 <h2>Un projet ?</h2>
 
                 <p>Vous avez des idées mais pas les compétences techniques ? Nous vous proposons de démarrer votre
@@ -53,9 +53,10 @@
                     pousses.</p>
 
                 <p>En parallèle, nos compétences en innovation peuvent être mises au service des entreprises afin de
-                    faciliter la mise en relation des deux mondes. <a href="votre-projet.html">En savoir plus</a></p>
+                    faciliter la mise en relation des deux mondes. <br/><br/>
+					<a class="btn" href="votre-projet.html">En savoir plus</a></p>
             </div>
-            <div class="span6">
+            <div class="span6 well">
                 <h2>Formation</h2>
 
                 <p>Besoin de monter en compétence sur un sujet, d’en savoir plus sur les bonnes pratiques ou tout
@@ -64,10 +65,12 @@
 
                 <p>Nous proposons des formations autour du développement informatique : Java, Scala, eXtreme
                     programming, NoSQL, Moteur de recherche, de recommendation etc.</p>
+				<br/><br/>
+				<a class="btn" href="votre-projet.html">En savoir plus</a>					
             </div>
         </div>
-        <div class="row">
-            <div class="span6">
+        <div class="row-fluid">
+            <div class="span6 well">
                 <h2>Accompagnement</h2>
 
                 <p>Développeurs polyglotes, nous intervenons sur vos produits en : Java, Python, Scala et
@@ -75,21 +78,24 @@
 
                 <p>Nous mettons particulièrement l’accent sur la qualité à travers des techniques de travail éprouvées :
                     intégration continue, TDD etc.</p>
+				<br/><br/>
+				<a class="btn" href="votre-projet.html">En savoir plus</a>					
             </div>
 
-            <div class="span6">
+            <div class="span6 well">
                 <h2>Audit</h2>
 
                 <p>Performances désastreuses ? Evolutions de plus en plus chères ? Nous pouvons y remédier.</p>
 
                 <p>Audit de code, audit de performance. Nous mettons notre expérience à votre disposition.</p>
+				<br/><br/>
+				<a class="btn" href="votre-projet.html">En savoir plus</a>					
             </div>
 
         </div>
 
     </section>
-
-    <br><br><br><br>
+</div>
     <footer class="footer">
         <p class="pull-right"><a href="#">Back to top</a></p>
         <ul>
@@ -103,6 +109,5 @@
             </li>
         </ul>
     </footer>
-</div>
 </body>
 </html>
