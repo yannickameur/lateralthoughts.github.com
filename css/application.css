@@ -2596,13 +2596,8 @@ Layout: Widget
 	}
 }
 
-
+/* Menu : aggrandissement police */
 .navbar .nav > li > a {
-	text-shadow:none;
 	font-size : 16px;
-	color: white;
 }
 
-.navbar .nav > li > a :hover{
-	color: white;
-}
