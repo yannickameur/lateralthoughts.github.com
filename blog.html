@@ -16,16 +16,18 @@
 	<link href="css/slider.css" rel="stylesheet">
 	<script src="js/bootstrap.js"></script>
 	<script src="js/modernizr-2.5.3.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Merienda' rel='stylesheet' type='text/css'>
+
 
 </head>
-<body>
+<body >
 
 
 <div id="header">
 
 	<div class="container">
 		
-		<a href="/" class="brand">Home</a> <br/>	
+		<a href="/" class="brand">Blog</a> <br/>	
 		
 		<a href="javascript:;" class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         	<i class="icon-reorder"></i>
@@ -46,7 +48,7 @@
 						Projets
 					</a>	
 				</li>
-				<li class="nav-icon">					
+				<li class="nav-icon active">					
 					<a href="/blog"" >
 						<i class="icon-comment"></i>
 						<span>Blog</span> 
@@ -79,15 +81,10 @@
 		<div class="masthead-pad">
 			
 			<div class="masthead-text">
-				
-				<div id="da-slider" class="da-slider">
-                        
-					<div class="da-slide da-slide-current">
-						<h2>Artisans logiciels,</h2> <h3>Facilitez le travail d'équipe</h3><p> Véritables artisans du logiciel, nous sommes intransigeants sur la qualité et la finition de notre travail. Que ce soit sur nos produits ou chez nos clients.
-						</p><div class="da-img"><img src="img/slider-img5.png" alt="slide1" class=""></div>
-					</div>
-					
-				</div>
+				<h1>Blog</h1>
+				<p>Retrouvez ici la liste des billets publiés par les membres de LT qui publient des articles.
+				<br/>
+				Cliquez sur leur fil RSS si vous souhaitez vous abonner à l'un d'entre eux ou <a href="#" ><i class="icon-rss"></i>ici</a> si vous souhaitez les suivre tous.</p>
 			</div> <!-- /.masthead-text -->
 		</div>
 		
@@ -100,52 +97,100 @@
 
 <div id="content">
 
-<div class="container ">
-		
-		<div class="row">
-
-			<div class="span3">
-				<h4><i class="icon-briefcase"></i> Un projet ?</h4>
-				 Vous avez des idées mais pas les compétences techniques ? Nous vous proposons de démarrer votre projet.
-
-Nos offres de partenariat sont particulièrement adaptées aux problématiques des jeunes pousses.
-
-En parallèle, nos compétences en innovation peuvent être mises au service des entreprises afin de faciliter la mise en relation des deux mondes. 
-				
-
-			</div>
-
-			<div class="span3">
-				<h4><i class="icon-group"></i> Formation</h4>
-Besoin de monter en compétence sur un sujet, d’en savoir plus sur les bonnes pratiques ou tout simplement d’approfondir vos connaissances ?
-
-Nous proposons des formations autour du développement informatique : Java, Scala, eXtreme programming, NoSQL, Moteur de recherche, de recommendation etc.
-
-			</div>
-
-			<div class="span3">
-				<h4><i class="icon-road"></i> Accompagnement</h4>
-Développeurs polyglotes, nous intervenons sur vos produits en : Java, Python, Scala et les technologies du Web.
-
-Nous mettons particulièrement l’accent sur la qualité à travers des techniques de travail éprouvées : intégration continue, TDD etc.
-
-			</div>
-			
-			<div class="span3">
-				<h4><i class="icon-bar-chart"></i> Besoin d'aide ?</h4>
-Performances désastreuses ? Evolutions de plus en plus chères ? Nous pouvons y remédier.
-<br/>
-Revue de code, revue de design, analyse de performance, nous mettons notre expérience à votre disposition.
-
-			</div>			
+	<div class="container ">
+		<div class="row-fluid">
 		</div>
+	
+		
+		<div class="row-fluid">
+			<div class="span3 well">
+				<h2>Les bloggeurs</h2>
+				<div class="row-fluid">
+					<div class="span3">
+						<img src="img/membres/hugo.jpg" height="48" width="48" class="img-circle" />   
+					</div>
+					<div class="span9">
+						<i>Hugo Lassiège</i> <br/>
+						<a href="#" ><i class="icon-rss"></i></a>
+					</div>
+				</div>
+				<br/>
+				
+				<div class="row-fluid">
+					<div class="span3">
+						<img src="img/membres/jon.jpg" height="48" width="48" class="img-circle" />   
+					</div>
+					<div class="span9">
+						Jonathan Winandy <br/>
+						<a href="#" ><i class="icon-rss"></i></a>
+					</div>
+				</div>
+				<br/>
+				
+				<div class="row-fluid">
+					<div class="span3">
+						<img src="img/membres/fbiville.jpg" height="48" width="48" class="img-circle" />   
+					</div>
+					<div class="span9">
+						Florent Biville<br/>
+						<a href="#" ><i class="icon-rss"></i></a>
+					</div>
+				</div>
+				
+				<br/>
+				<div class="row-fluid">
+					<div class="span3">
+						<img src="img/membres/jblemee.jpeg" height="48" width="48" class="img-circle" />   
+					</div>
+					<div class="span9">
+						Jean-Baptiste Lemée <br/>
+						<a href="#" ><i class="icon-rss"></i></a>
+					</div>
+				</div>
 
-		<div class="row pagination-centered">
-				<a href="contact" class="btn btn-large btn-primary">
-					<i class=" icon-signin"></i>
-					&nbsp;
-					Contactez-nous			
-				</a>
+				<br/>
+				<div class="row-fluid">
+					<div class="span3">
+						<img src="img/membres/ogirardot.jpg" height="48" width="48" class="img-circle" />   
+					</div>
+					<div class="span9">
+						Olivier Girardot <br/>
+						<a href="#" ><i class="icon-rss"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="span9">
+				<h2>Les derniers articles</h2>
+			
+				<table class="table table-striped">
+                    <tbody>
+                      <tr>
+                        <td><span><img src="img/membres/hugo.jpg" height="48" width="48" class="img-circle" /> <br/> 2 jours auparavant</span></td>
+                        <td>
+							<a href="#">Les sociétés coopératives</a>
+							<br/>
+							<p>Allez je me lance. A 34 ans, je suis aujourd’hui fier d’être développeur.
+Et pourtant c’était loin d’être gagné. J’ai bossé en SSII en début de carrière. Vous savez la SSII leader dans son domaine avec 10 000 grouillots de base. Bon endroit pour apprendre mais on te fait vite comprendre que l’évolution de carrière c’est de sortir de la technique pour faire de zolis graphes sur excel. D’ailleurs la moyenne d’âge des équipes de dev c’est 31 ans et attention on compte la faire descendre.
+
+Et depuis, j'ai retrouvé le droit chemin. Vous voulez savoir comment ?</p>
+							<a href="#">Voir la suite...</a>
+						
+						</td>
+                      </tr>
+                      <tr>
+                        <td><span><img src="img/membres/ogirardot.jpg" height="48" width="48" class="img-circle" /> <br/> 1 mois auparavant</span></td>
+                        <td>
+							<a href="#">LA VIE DE STARTUP</a>
+							<br/>
+							<p>Petit coup de coeur aujourd’hui avec cette vidéo faite par et avec des gens que je connais, car en somme la vie (et pas seulement la mienne) se résume un peu au rythme de cette vidéo. On avance, on travaille, On joue, on travaille, On se pose, on travaille, On découvre, on travaille, On se [...]</p>
+							<a href="#">Voir la suite...</a>
+						
+						</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+			</div>
 		</div>		
 	</div> <!-- /.container -->
 
