@@ -18,15 +18,16 @@
 	<script src="js/modernizr-2.5.3.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Merienda' rel='stylesheet' type='text/css'>
 
+
 </head>
-<body>
+<body >
 
 
 <div id="header">
 
 	<div class="container">
 		
-		<a href="/" class="brand">Home</a> <br/>	
+		<a href="/" class="brand">Blog</a> <br/>	
 		
 		<a href="javascript:;" class="btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
         	<i class="icon-reorder"></i>
@@ -47,7 +48,7 @@
 						Projets
 					</a>	
 				</li>
-				<li class="nav-icon">					
+				<li class="nav-icon ">					
 					<a href="/blog"" >
 						<i class="icon-comment"></i>
 						<span>Blog</span> 
@@ -59,7 +60,7 @@
 						Valeurs
 					</a>	
 				</li>
-				<li class="nav-icon">					
+				<li class="nav-icon active">					
 					<a href="/contact">
 						<i class="icon-envelope"></i>
 						Contact
@@ -80,15 +81,8 @@
 		<div class="masthead-pad">
 			
 			<div class="masthead-text">
-				
-				<div id="da-slider" class="da-slider">
-                        
-					<div class="da-slide da-slide-current">
-						<h2>Artisans logiciels,</h2> <h3>Facilitez le travail d'équipe</h3><p> Véritables artisans du logiciel, nous sommes intransigeants sur la qualité et la finition de notre travail. Que ce soit sur nos produits ou chez nos clients.
-						</p><div class="da-img"><img src="img/slider-img5.png" alt="slide1" class=""></div>
-					</div>
-					
-				</div>
+				<h1>Contact</h1>
+				<p>Envie de nous joindre ?</p>
 			</div> <!-- /.masthead-text -->
 		</div>
 		
@@ -99,55 +93,107 @@
 
 
 
+
+
 <div id="content">
 
-<div class="container ">
+	<div class="container">
+		
 		
 		<div class="row">
-
-			<div class="span3">
-				<h4><i class="icon-briefcase"></i> Un projet ?</h4>
-				 Vous avez des idées mais pas les compétences techniques ? Nous vous proposons de démarrer votre projet.
-
-Nos offres de partenariat sont particulièrement adaptées aux problématiques des jeunes pousses.
-
-En parallèle, nos compétences en innovation peuvent être mises au service des entreprises afin de faciliter la mise en relation des deux mondes. 
-				
-
-			</div>
-
-			<div class="span3">
-				<h4><i class="icon-group"></i> Formation</h4>
-Besoin de monter en compétence sur un sujet, d’en savoir plus sur les bonnes pratiques ou tout simplement d’approfondir vos connaissances ?
-
-Nous proposons des formations autour du développement informatique : Java, Scala, eXtreme programming, NoSQL, Moteur de recherche, de recommendation etc.<br/>
-<a href="/training">En savoir plus</a>
-			</div>
-
-			<div class="span3">
-				<h4><i class="icon-road"></i> Accompagnement</h4>
-Développeurs polyglotes, nous intervenons sur vos produits en : Java, Python, Scala et les technologies du Web.
-
-Nous mettons particulièrement l’accent sur la qualité à travers des techniques de travail éprouvées : intégration continue, TDD etc.
-
-			</div>
 			
-			<div class="span3">
-				<h4><i class="icon-bar-chart"></i> Besoin d'aide ?</h4>
-Performances désastreuses ? Evolutions de plus en plus chères ? Nous pouvons y remédier.
-<br/>
-Revue de code, revue de design, analyse de performance, nous mettons notre expérience à votre disposition.
+			<div class="span4">
+				<h3>Informations</h3>
+					<p>
+						<i class="icon-home"></i> <b>Lateral-Thoughts</b>
+					</p>
+					<p>
+						<i class="icon-map-marker"></i> 37 rue des Mathurins
+					</p>
+					<p>	
+						<i class="icon-map-marker"></i> Paris, 75008, France
+					</p>	
+					<p>
+						<i class="icon-envelope"></i> contact@lateralthoughts.com
+					</p>
+					<p>
+						<i class="icon-globe"></i> www.lateral-thoughts.com
+					</p>
+				
+			</div> 
+			<div class="span8">
+				<h3>Formulaire de contact</h3>
+					<p>
+						 <form action="mailto:contact@lateral-thoughts.com" method="POST" accept-charset="utf-8" enctype="text/plain" >
+						 	             
 
-			</div>			
-		</div>
+	<div class="control-group">
+	    <label class="control-label" for="name" >Nom <i class="req">*</i></label>
+	    <div class="controls">
+	    	<div class=" ">
+	    	
+	         
+	        <input type="text" id="name" class="input-xlarge" name="name" 
+	        value="" 
+	        maxlength="255" title="Votre nom" data-trigger="focus" rel="tooltip"
+	        data-placement="right" placeholder="Votre nom" required="required"
+	        />
+	        
+	        
+	        </div>
+	    </div>
+    </div>
+    
+						 	             
 
-		<div class="row pagination-centered">
-				<a href="contact" class="btn btn-large btn-primary">
-					<i class=" icon-signin"></i>
-					&nbsp;
-					Contactez-nous			
-				</a>
-		</div>		
+	<div class="control-group">
+	    <label class="control-label" for="email" >Email <i class="req">*</i></label>
+	    <div class="controls">
+	    	<div class=" ">
+	    	
+	         
+	        <input type="email" id="email" class="input-xlarge" name="email" 
+	        value="" 
+	        maxlength="255" title="john@doe.com" data-trigger="focus" rel="tooltip"
+	        data-placement="right" placeholder="john@doe.com" required="required"
+	        />
+	        
+	        
+	        </div>
+	    </div>
+    </div>
+    
+						 	             
+
+	<div class="control-group">
+	    <label class="control-label" for="message" >Message <i class="req">*</i></label>
+	    <div class="controls">
+	    	<div >
+	         
+	        <textarea id="message" 
+	        class="input-xxlarge" name="message" 
+	        title="Besoin de conseil, d'aide sur un projet, de formation ou interessé par notre incubateur ?" 
+	        data-trigger="focus" 
+	        rows="10"
+	        data-placement="right" placeholder="Besoin de conseil, d'aide sur un projet, de formation ou interessé par notre incubateur ?" required="required"
+	        ></textarea>
+	        
+	        </div>
+	    </div>
+    </div>
+    
+							 <p >
+				       			<input type="submit" value="Contact"  class="btn btn-info btn-large"/>  
+				       		</p>
+						 
+</form>					</p>				
+				
+				
+			</div> 
+
+			
+		</div> <!-- /.row -->		
+	
 	</div> <!-- /.container -->
 
 </div> <!-- /#content -->
