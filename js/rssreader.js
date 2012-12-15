@@ -1,3 +1,17 @@
+$.Mustache.add('rssshort', '<ul>'+
+                            '{{#entries}}'+
+                            '<li><a href="{{link}}" target="_blank">{{title}}</a><p>{{contentSnippet}}</p> </li>'+
+                            '{{/entries}}'+
+                            '</ul>');
+
+
+$.Mustache.add('rssfull', '<ul>'+
+                            '{{#entries}}'+
+                            '<li><a href="{{link}}" target="_blank">{{title}}</a><p>{{contentSnippet}}</p> </li>'+
+                            '{{/entries}}'+
+                            '</ul>');
+
+
 var rssReader = {
     containers : null,
 
@@ -22,41 +36,11 @@ var rssReader = {
 
     // parsing of results by google
     parse : function(context, data) {
-        // creating list of elements
-        var mainList = document.createElement('ul');
-
-        // also creating its childs (subitems)
         var entries = data.feed.entries;
-        for (var i=0; i<entries.length; i++) {
-            var listItem = document.createElement('li');
-            var title = entries[i].title;
-            var contentSnippet = entries[i].contentSnippet;
-            var contentSnippetText = document.createTextNode(contentSnippet);
-
-            var link = document.createElement('a');
-            link.setAttribute('href', entries[i].link);
-            link.setAttribute('target','_blank');
-            var text = document.createTextNode(title);
-            link.appendChild(text);
-
-            // add link to list item
-            listItem.appendChild(link);
-
-            var desc = document.createElement('p');
-            desc.appendChild(contentSnippetText);
-
-            // add description to list item
-            listItem.appendChild(desc);
-
-            // adding list item to main list
-            mainList.appendChild(listItem);
-        }
-        var container = document.getElementById(context);
-        container.innerHTML = '';
-        container.appendChild(mainList);
+        $('#'+context).empty().mustache('rssshort', {'entries':entries});
     }
 };
 
-window.onload = function() {
+$(document).ready (function() {
     rssReader.init('.post_results');
-}
+});
