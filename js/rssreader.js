@@ -1,30 +1,12 @@
-function myGetElementsByClassName(selector) {
-    if ( document.getElementsByClassName ) {
-        return document.getElementsByClassName(selector);
-    }
-
-    var returnList = new Array();
-    var nodes = document.getElementsByTagName('div');
-    var max = nodes.length;
-    for ( var i = 0; i < max; i++ ) {
-        if ( nodes[i].className == selector ) {
-            returnList[returnList.length] = nodes[i];
-        }
-    }
-    return returnList;
-}
-
 var rssReader = {
     containers : null,
 
     // initialization function
     init : function(selector) {
-        containers = myGetElementsByClassName(selector);
-        for(i=0;i<containers.length;i++){
-            // getting necessary variables
-            var rssUrl = containers[i].getAttribute('rss_url');
-            var num = containers[i].getAttribute('rss_num');
-            var id = containers[i].getAttribute('id');
+        $(selector).each(function() {
+            var rssUrl = $(this).attr('rss_url');
+            var num = $(this).attr('rss_num');
+            var id = $(this).attr('id');
 
             // creating temp scripts which will help us to transform XML (RSS) to JSON
             var url = encodeURIComponent(rssUrl);
@@ -34,15 +16,12 @@ var rssReader = {
             script.setAttribute('type','text/javascript');
             script.setAttribute('charset','utf-8');
             script.setAttribute('src',googUrl);
-            containers[i].appendChild(script);
-        }
+            $(selector).append(script);
+        });
     },
 
     // parsing of results by google
     parse : function(context, data) {
-        var container = document.getElementById(context);
-        container.innerHTML = '';
-
         // creating list of elements
         var mainList = document.createElement('ul');
 
@@ -72,10 +51,12 @@ var rssReader = {
             // adding list item to main list
             mainList.appendChild(listItem);
         }
+        var container = document.getElementById(context);
+        container.innerHTML = '';
         container.appendChild(mainList);
     }
 };
 
 window.onload = function() {
-    rssReader.init('post_results');
+    rssReader.init('.post_results');
 }
