@@ -5,15 +5,29 @@ $.Mustache.add('rssshort', '<ul>'+
                             '</ul>');
 
 
-$.Mustache.add('rssfull', '<ul>'+
-                            '{{#entries}}'+
-                            '<li><a href="{{link}}" target="_blank">{{title}}</a><p>{{contentSnippet}}</p> </li>'+
-                            '{{/entries}}'+
-                            '</ul>');
+$.Mustache.add('rssfull', '{{#entries}}'+
+                        '<tr>'+
+                        '<td>{{author}}'+
+                        '<br/><span class="date">{{publishedDate}}</span></span></td>'+
+                        '<td>'+
+                        '    <a href="{{link}}" target="_blank">{{title}}</a>'+
+                        '    <br/>'+
+                        '    <p>{{contentSnippet}}</p>'+
+                        '</td>'+
+                      '</tr>'+
+                      '{{/entries}}');
 
 
 var rssReader = {
     containers : null,
+
+    replaceDate : function($element) {
+        $element.find('.date').each(function() {
+            var date = new Date($(this).html());
+            var momentized = moment(date);
+            $(this).html(momentized.fromNow());
+        });
+    },
 
     // initialization function
     init : function(selector) {
@@ -36,8 +50,11 @@ var rssReader = {
 
     // parsing of results by google
     parse : function(context, data) {
+        var $element = $('#'+context);
+        var scriptName = $element.attr('rss_script') || 'short';
         var entries = data.feed.entries;
-        $('#'+context).empty().mustache('rssshort', {'entries':entries});
+        $element.empty().mustache('rss'+scriptName, {'entries':entries});
+        this.replaceDate($element);
     }
 };
 
