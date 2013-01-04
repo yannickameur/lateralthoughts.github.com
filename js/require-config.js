@@ -6,14 +6,15 @@ define(['jquery', 'modules/loader', 'bootstrap', 'modernizr-2.5.3.min'], functio
     });
 
     require.config({
-        baseUrl : '/js',
+        baseUrl : "/js",
         map : {
             '*' : {
                 'text' : '/js/text.js',
+                'tpl' : '/tpl'
             }
         },
         paths: {
-            'Mustache': '/js/mustache'
+            "Mustache": "/js/mustache"
         }
     });
 });
