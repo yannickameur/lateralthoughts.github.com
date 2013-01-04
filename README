@@ -1,0 +1,12 @@
+Attempt to use client-side templating with RequireJS
+
+# DONE
+
+- homepage
+
+# TODO
+
+- Fix random bug on template loading :/
+- SEO
+- JSONP with requireJS directly (Google Reader RSS)
+- other pages

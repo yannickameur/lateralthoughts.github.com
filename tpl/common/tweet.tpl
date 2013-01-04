@@ -1,0 +1,1 @@
+<img src="%user_profile_image_url%" width="20" height="20"/> "%text%" <a href="http://twitter.com/%user_screen_name%/statuses/%id_str%/">%time%</a>
