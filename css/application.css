@@ -1854,7 +1854,7 @@ Layout: Header
 }
 .brand {
   position: absolute;
-  top: -10px;
+  top: -3px;
   display: block;
   overflow: hidden;
   width: 450px;
